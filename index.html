@@ -3,217 +3,119 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sworn | Proof of Done</title>
-<meta name="description" content="Sworn is a coin for proving that work was done. Fixed supply of 1 billion. Plain-English rules. In testing now.">
+<title>Sworn | A Coin for Proving That Work Was Done</title>
+<meta name="description" content="Sworn is a coin for proving that a claim is true: a bond, an independent check and a 7-day challenge. Fixed supply of 1 billion. In testing now.">
 <link rel="canonical" href="https://sworncoin.com/">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="apple-touch-icon" href="/sworn-profile-800.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="sworn-profile-800.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://sworncoin.com/">
-<meta property="og:title" content="Sworn | Proof of Done">
-<meta property="og:description" content="A coin for proving that work was done. Fixed supply of 1 billion. Plain-English rules. In testing now.">
-<meta property="og:image" content="https://sworncoin.com/sworn-banner-1500x500.png">
-<meta property="og:image:width" content="1500">
-<meta property="og:image:height" content="500">
-<meta property="og:image:alt" content="The Sworn mark beside the words Sworn, Proof of Done">
 <meta property="og:site_name" content="Sworn">
+<meta property="og:url" content="https://sworncoin.com/">
+<meta property="og:title" content="Sworn | A Coin for Proving That Work Was Done">
+<meta property="og:description" content="Sworn is a coin for proving that a claim is true: a bond, an independent check and a 7-day challenge. Fixed supply of 1 billion. In testing now.">
+<meta property="og:image" content="https://sworncoin.com/sworn-share-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Sworn coin beside the words Sworn, Proof of Done">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@sworncoin">
 <meta name="theme-color" content="#071626">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<style>
-:root { color-scheme: dark; --field:#071626; --panel:#0E2238; --line:#23405F; --ink:#F3EEE2; --muted:#A9B6C6; --gold:#D4AF5A; --pale:#F6E3A8;
-  --display:"Source Serif 4", Georgia, serif; --body:Inter, "Helvetica Neue", Arial, sans-serif; --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace; }
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--field); color: var(--ink); font: 17px/1.6 var(--body); }
-a { color: var(--pale); text-underline-offset: 3px; }
-a:focus-visible { outline: 2px solid var(--pale); outline-offset: 3px; border-radius: 2px; }
-.skip { position: absolute; left: -999px; } .skip:focus { left: 12px; top: 12px; background: var(--panel); padding: 8px 12px; z-index: 5; }
-.wrap { max-width: 1040px; margin: 0 auto; padding: 0 22px; }
-header.top { border-bottom: 1px solid var(--line); }
-header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); font: 600 1.15rem/1 var(--body); letter-spacing: .28em; }
-.brand sup { font-size: .5em; letter-spacing: 0; color: var(--muted); margin-left: -.3em; }
-nav ul { list-style: none; display: flex; gap: 6px 22px; margin: 0; padding: 0; flex-wrap: wrap; }
-nav a { color: var(--muted); text-decoration: none; font-size: .93rem; padding: 10px 0; display: inline-block; }
-nav a:hover { color: var(--ink); }
-.hero { background: radial-gradient(ellipse at 70% 30%, #17365A 0%, var(--field) 65%); border-bottom: 1px solid var(--line); }
-.hero .wrap { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; padding-top: 72px; padding-bottom: 76px; }
-.eyebrow { font: 500 .82rem/1 var(--body); letter-spacing: .34em; color: var(--gold); text-transform: uppercase; margin: 0 0 20px; }
-h1 { font: 600 clamp(2.3rem, 6vw, 3.9rem)/1.06 var(--display); margin: 0 0 22px; text-wrap: balance; letter-spacing: -.01em; }
-.lede { font-size: 1.14rem; color: var(--ink); max-width: 56ch; margin: 0 0 14px; }
-.facts { color: var(--muted); margin: 0 0 28px; max-width: 56ch; }
-.status { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--gold); color: var(--pale); padding: 9px 14px; border-radius: 4px; font-size: .95rem; }
-.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
-.hero img { width: 100%; max-width: 340px; height: auto; justify-self: center; border-radius: 50%; }
-section { padding: 68px 0; border-bottom: 1px solid var(--line); }
-h2 { font: 600 clamp(1.6rem, 3.6vw, 2.2rem)/1.15 var(--display); margin: 0 0 12px; text-wrap: balance; }
-.sub { color: var(--muted); max-width: 64ch; margin: 0 0 30px; }
-.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; max-width: 860px; }
-.steps li { counter-increment: s; display: grid; grid-template-columns: 3.4rem 9rem 1fr; gap: 0 12px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--line); }
-.steps li:last-child { border-bottom: 1px solid var(--line); }
-.steps li::before { content: counter(s); font: 500 1.9rem/1 var(--display); color: var(--gold); }
-.steps h3 { font: 600 1.08rem/1.4 var(--body); margin: 0; }
-.steps p { margin: 0; color: var(--ink); }
-td.res { color: var(--pale); }
-.h3 { font: 600 1.15rem/1.3 var(--body); margin: 0 0 12px; }
-.roles li::before { content: none; } .roles li { grid-template-columns: 9rem 1fr; }
-.prose { max-width: 70ch; } .prose p { margin: 0 0 16px; } .prose h3 { font: 600 1.15rem/1.3 var(--body); margin: 34px 0 12px; }
-ul.ex { list-style: none; margin: 0 0 8px; padding: 0; max-width: 860px; }
-ul.ex li { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; padding: 16px 0; border-top: 1px solid var(--line); color: var(--muted); }
-ul.ex li:last-child { border-bottom: 1px solid var(--line); }
-ul.ex .q { font: 500 1.12rem/1.4 var(--display); color: var(--ink); }
-.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
-.tile { background: var(--panel); border: 1px solid var(--line); padding: 18px; }
-.tile .n { font: 500 1.6rem/1.2 var(--mono); color: var(--pale); font-variant-numeric: tabular-nums; display: block; margin-bottom: 6px; }
-.tile .l { color: var(--muted); font-size: .92rem; }
-ul.plain { margin: 0; padding-left: 1.2em; max-width: 70ch; display: flex; flex-direction: column; gap: 8px; }
-ol.rules { margin: 0; padding: 0; list-style: none; counter-reset: r; max-width: 78ch; }
-ol.rules li { counter-increment: r; display: grid; grid-template-columns: 2.6em 1fr; padding: 13px 0; border-top: 1px solid var(--line); }
-ol.rules li::before { content: counter(r); font: 500 .95rem/1.7 var(--mono); color: var(--gold); }
-.scroll { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-bottom: 26px; }
-table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .96rem; }
-th, td { text-align: left; vertical-align: top; padding: 13px 16px; border-bottom: 1px solid var(--line); }
-th { color: var(--muted); font-weight: 600; font-size: .82rem; }
-tr:last-child td { border-bottom: 0; }
-td.num { font-family: var(--mono); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.notice { background: var(--panel); border: 1px solid var(--gold); padding: 24px; max-width: 78ch; }
-.notice p { margin: 0 0 10px; } .notice p:last-child { margin: 0; }
-footer { padding: 34px 0 48px; color: var(--muted); font-size: .9rem; }
-footer .wrap { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
-@media (max-width: 860px) {
-  .hero .wrap { grid-template-columns: 1fr; padding-top: 44px; padding-bottom: 52px; }
-  .hero img { max-width: 200px; order: -1; justify-self: start; }
-  .steps li { grid-template-columns: 2.6rem 1fr; } .steps p { grid-column: 2; margin-top: 4px; }
-  .roles li { grid-template-columns: 1fr; } .roles p { grid-column: 1; }
-  ul.ex li { grid-template-columns: 1fr; }
-  section { padding: 50px 0; }
-}
-@media (max-width: 640px) {
-  nav ul { gap: 0 18px; }
-  .scroll { overflow: visible; } table { min-width: 0; } thead { position: absolute; left: -999px; }
-  tr { display: block; padding: 14px 16px; border-bottom: 1px solid var(--line); } tr:last-child { border-bottom: 0; } tr.cont { padding-top: 0; margin-top: -4px; }
-  td { display: block; padding: 2px 0; border: 0; white-space: normal !important; } td:empty { display: none; }
-  td:first-child { font-weight: 600; } td[data-l="Coins"]::before, td[data-l="Part"]::before { content: attr(data-l) ": "; color: var(--muted); font-family: var(--body); }
-  td[data-l="How"], td[data-l="Terms"] { color: var(--muted); }
-}
-</style>
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Sworn","legalName":"VITALEDGE, LLC","url":"https://sworncoin.com/","logo":"https://sworncoin.com/sworn-profile-800.png","email":"hello@sworncoin.com","founder":{"@type":"Person","name":"Jakob Taylor"},"sameAs":["https://x.com/sworncoin"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Go to the main text</a>
 <header class="top"><div class="wrap">
-  <a class="brand" href="/" aria-label="Sworn, home"><svg width="34" height="34" viewBox="0 0 1000 1000" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E3A8"/><stop offset=".5" stop-color="#D4AF5A"/><stop offset="1" stop-color="#9C7526"/></linearGradient></defs><circle cx="500" cy="500" r="448" fill="none" stroke="url(#mg)" stroke-width="30"/><g transform="translate(500 500) scale(.92) translate(-500 -500)"><path d="M265 410 L385 530 L647 268" fill="none" stroke="url(#mg)" stroke-width="84"/><path d="M735 590 L615 470 L353 732" fill="none" stroke="#F3EEE2" stroke-width="84"/></g></svg><span>SWORN<sup>™</sup></span></a>
-  <nav aria-label="Sections"><ul>
-    <li><a href="#purpose">Purpose</a></li><li><a href="#how">How It Works</a></li><li><a href="#uses">Who Uses It</a></li><li><a href="#examples">Examples</a></li><li><a href="#rules">Rules</a></li><li><a href="#shares">Shares</a></li><li><a href="#contact">Contact</a></li>
-  </ul></nav>
+  <a class="brand" href="./" aria-label="Sworn, home"><svg width="32" height="32" viewBox="0 0 1000 1000" aria-hidden="true"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E3A8"/><stop offset=".5" stop-color="#D4AF5A"/><stop offset="1" stop-color="#9C7526"/></linearGradient></defs><circle cx="500" cy="500" r="448" fill="none" stroke="url(#mg)" stroke-width="30"/><g transform="translate(500 500) scale(.92) translate(-500 -500)"><path d="M265 410 L385 530 L647 268" fill="none" stroke="url(#mg)" stroke-width="84"/><path d="M735 590 L615 470 L353 732" fill="none" stroke="#F3EEE2" stroke-width="84"/></g></svg><span>SWORN<sup>™</sup></span></a>
+  <nav aria-label="Main"><ul><li><a href="./" aria-current="page">Home</a></li><li><a href="how-it-works/">How It Works</a></li><li><a href="rules/">Rules</a></li><li><a href="record/">Record</a></li><li><a href="questions/">Questions</a></li></ul></nav>
 </div></header>
 <main id="main">
+
 <div class="hero"><div class="wrap">
   <div>
     <p class="eyebrow">Proof of Done</p>
     <h1>A coin for proving that work was done.</h1>
-    <p class="lede">Someone posts a claim and puts coins behind it. An independent checker reads the system the claim is about and records what it shows. Anyone can challenge that finding for 7 days.</p>
-    <p class="facts">1,000,000,000 coins, created once. 17 rules, all on this page. Ticker SWORN.</p>
+    <p class="lede">Sworn makes a claim cost something to break. The person who makes the claim locks coins behind it. An independent checker reads the facts, and anyone can challenge the finding for 7 days.</p>
+    <p class="facts">1,000,000,000 coins, created once. 17 rules in plain English. Ticker SWORN.</p>
+    <div class="actions"><a class="btn primary" href="how-it-works/">See how it works</a><a class="btn quiet" href="rules/">Read the 17 rules</a></div>
     <span class="status">In testing. The coin trades nowhere today.</span>
   </div>
-  <img src="/sworn-coin.svg" width="340" height="340" alt="The Sworn coin: two interlocked check marks on a gold face">
+  <img src="sworn-coin.svg" width="330" height="330" alt="The Sworn coin: two interlocked check marks on a gold face">
 </div></div>
 
-<section id="purpose" aria-labelledby="h-purpose"><div class="wrap">
-  <h2 id="h-purpose">What Sworn Is For</h2>
+<section aria-labelledby="h-purpose"><div class="wrap two">
   <div class="prose">
-    <p>A statement costs nothing to make. The issuer of a coin can say that its supply is fixed, and a buyer has only the issuer’s word for it.</p>
-    <p>Sworn puts coins behind the statement. The issuer locks a bond. An independent checker reads the coin and records what it shows. If the statement turns false during its term, the issuer loses the bond and the record shows the statement as broken.</p>
-    <p>The tools people use today make mistakes. This project graded ten well-known coins from a public scanner’s data. The scanner misread one coin and could not read another.</p>
-    <p>The bond is in Sworn because code can lock a coin without any company taking custody of it. Bonds, stakes and fees go from a wallet into the registry’s code and come out under its rules.</p>
+    <h2 id="h-purpose">What Sworn is for</h2>
+    <p>A promise costs nothing to make. The issuer of a coin can say that its supply is fixed, and a buyer has only the issuer’s word for it.</p>
+    <p>Sworn puts coins behind the promise. The issuer locks a bond. An independent checker reads the coin and records what it shows. If the statement turns false during its term, the issuer loses the bond and the record shows the statement as broken.</p>
+    <p>A buyer reads the result at no charge: which promises have coins behind them, and which were honored.</p>
   </div>
+  <figure class="scard" aria-label="An example of a sworn statement as a reader sees it">
+    <figcaption>Example. Sworn is in testing and no statement is in force.</figcaption>
+    <p class="st">“No more of our coins can be created.”</p>
+    <dl>
+      <div><dt>Sworn by</dt><dd>The coin’s issuer</dd></div>
+      <div><dt>Bond locked</dt><dd>10,000 Sworn</dd></div>
+      <div><dt>Checked by</dt><dd>An independent checker</dd></div>
+      <div><dt>Finding</dt><dd>True, unchallenged after 7 days</dd></div>
+      <div><dt>Standing</dt><dd><span class="chip good">In force</span> day 120 of 365</dd></div>
+    </dl>
+  </figure>
 </div></section>
 
-<section id="how" aria-labelledby="h-how"><div class="wrap">
-  <h2 id="h-how">How It Works</h2>
-  <p class="sub">The first claims Sworn checks come from the issuers of other coins. An issuer states a fact about its own coin, for example that the supply is fixed, and puts Sworn behind the statement. The fact sits on a public blockchain, where anyone can read it again.</p>
-  <ol class="steps"><li><h3>Post</h3><p>An issuer posts a sworn statement about its own coin for a term of 30 to 365 days. A bond of at least 10,000 Sworn goes behind the statement, with a fee of at least 20 Sworn for its check.</p></li><li><h3>Check</h3><p>A checker who has posted at least 10,000 Sworn of its own reads the coin’s code and records a finding. A party to the statement cannot check it.</p></li><li><h3>Challenge</h3><p>Anyone can challenge the finding for 7 days. A false finding costs the checker 50% of its stake. A failed challenge costs the challenger 100 Sworn.</p></li><li><h3>Settle</h3><p>A statement that stands through its term is recorded as honored and its bond returns. A statement shown false forfeits its bond: 20% to the reporter and 80% to the community pool.</p></li></ol>
+<section aria-labelledby="h-compare"><div class="wrap">
+  <h2 id="h-compare">What a sworn statement adds</h2>
+  <p class="sub">The tools people use today make mistakes. This project graded ten well-known coins from a public scanner’s data. The scanner misread one coin and could not read another.</p>
+  <div class="scroll"><table><thead><tr><th scope="col"></th><th scope="col">A promise today</th><th scope="col">A sworn statement</th></tr></thead><tbody>
+  <tr><td data-l="Question">Who says it is true</td><td data-l="A promise today" class="muted">The issuer</td><td data-l="A sworn statement" class="sw">An independent checker with at least 10,000 Sworn at stake</td></tr><tr><td data-l="Question">What breaking it costs the issuer</td><td data-l="A promise today" class="muted">Nothing</td><td data-l="A sworn statement" class="sw">The bond: at least 10,000 Sworn</td></tr><tr><td data-l="Question">Who can dispute it</td><td data-l="A promise today" class="muted">No one with any standing</td><td data-l="A sworn statement" class="sw">Anyone: a challenge within 7 days, a report at any time during the term</td></tr><tr><td data-l="Question">How long it is watched</td><td data-l="A promise today" class="muted">The day it was said</td><td data-l="A sworn statement" class="sw">The whole term, 30 to 365 days</td></tr><tr><td data-l="Question">What remains afterward</td><td data-l="A promise today" class="muted">The issuer’s word</td><td data-l="A sworn statement" class="sw">A public record: honored or broken</td></tr>
+  </tbody></table></div>
 </div></section>
 
-<section id="uses" aria-labelledby="h-uses"><div class="wrap">
-  <h2 id="h-uses">Who Uses Sworn, and How</h2>
+<section aria-labelledby="h-flow"><div class="wrap">
+  <h2 id="h-flow">Four steps</h2>
+  <p class="sub">One sworn statement, from posting to settlement.</p>
+  <ol class="flow"><li><h3>Post</h3><p>An issuer states a fact about its own coin and locks a bond behind it.</p></li><li><h3>Check</h3><p>An independent checker reads the coin and records what it shows.</p></li><li><h3>Challenge</h3><p>Anyone can dispute the finding for 7 days.</p></li><li><h3>Settle</h3><p>A statement that stands returns its bond. A statement shown false loses it.</p></li></ol>
+  <p style="margin:34px 0 0"><a href="how-it-works/">Each step in detail, with a worked example</a></p>
+</div></section>
+
+<section aria-labelledby="h-uses"><div class="wrap">
+  <h2 id="h-uses">Who uses Sworn</h2>
   <p class="sub">The coin has four jobs: an issuer’s bond, a checker’s stake, the fee for a check, and the bond on a report or a challenge.</p>
-  <ul class="steps roles"><li><h3>An issuer</h3><p>You run a coin and want a statement about it believed. You post the statement for 30 to 365 days, lock a bond of at least 10,000 Sworn behind it and pay a fee of at least 20 Sworn. When the statement stands through its term, the bond returns and the record shows the statement as honored.</p></li><li><h3>A checker</h3><p>You verify statements. You post at least 10,000 Sworn as your stake, read the coin and record a finding. You receive 80% of the fee for each finding that stands. A false finding costs 50% of your stake.</p></li><li><h3>A reporter</h3><p>You find a statement that has turned false. You post 100 Sworn with your report. When the statement reads false, you receive 20% of its bond. When it still reads true, your 100 Sworn go to the issuer.</p></li><li><h3>A reader</h3><p>You are deciding whether to trust a coin. You read which of its statements are in force, which were honored and which were broken. Reading requires no Sworn.</p></li></ul>
+  <ul class="rows"><li><h3>A reader</h3><p>You are deciding whether to trust a coin. You see which of its promises have coins behind them, which were honored and which were broken. Reading requires no Sworn.</p></li><li><h3>An issuer</h3><p>You run a coin and want your promises about it believed. You post a statement for 30 to 365 days, lock a bond of at least 10,000 Sworn behind it and pay a fee of at least 20 Sworn. When the statement stands through its term, the bond returns and the record shows the statement as honored.</p></li><li><h3>A checker</h3><p>You verify statements. You post at least 10,000 Sworn as your stake, read the coin and record a finding. You receive 80% of the fee for each finding that stands. A false finding costs 50% of your stake.</p></li><li><h3>A reporter</h3><p>You find a statement that has turned false. You post 100 Sworn with your report. When the statement reads false, you receive 20% of its bond. When it still reads true, your 100 Sworn go to the issuer.</p></li></ul>
 </div></section>
 
-<section id="examples" aria-labelledby="h-examples"><div class="wrap">
-  <h2 id="h-examples">Examples</h2>
-  <p class="sub">Statements an issuer can swear to about its own coin, and what the checker reads.</p>
-  <ul class="ex"><li><span class="q">“No more of our coins can be created.”</span><span>The checker reads the coin’s code for any function that creates coins.</span></li><li><span class="q">“No account can freeze or take your coins.”</span><span>The checker reads the code for any power to freeze, pause or change a balance.</span></li><li><span class="q">“Insiders own no more than 10% of the supply.”</span><span>The checker reads the balances of the creator and the controlling accounts.</span></li><li><span class="q">“The trading pool cannot be withdrawn this year.”</span><span>The checker reads who controls the pool and whether it is locked.</span></li><li><span class="q">“No one can replace the code.”</span><span>The checker reads whether any account has the power to change the rules.</span></li></ul>
-  <div class="prose">
-    <h3>One Statement, Start to Finish</h3>
-    <p>An issuer swears for 365 days that no more of its coins can be created, and locks 10,000 Sworn behind the statement. A checker reads the code and records that the statement is true. No one challenges the finding within 7 days, and the statement is in force.</p>
-    <p>On day 200 the issuer changes its code so that new coins can be created. A reporter posts 100 Sworn and reports the statement. It now reads false. The reporter receives 2,000 Sworn, 8,000 go to the community pool, and the record shows the statement as broken.</p>
-    <p>Had the issuer left the code alone, the 10,000 Sworn would have returned when the term ended and the record would show the statement as honored.</p>
-    <h3>Claims of Finished Work</h3>
-    <p>The tested model also covers a second kind of claim: a contractor, a service or an AI agent reports that a job is finished, for example that a report was sent or an invoice was filed. A checker reads the system where the work would appear. This kind of claim is left out of the first launch. It works today only where the checker can read the system, and work inside a private system, such as an inbox, has no solution in this build.</p>
-  </div>
-</div></section>
-
-<section id="standing" aria-labelledby="h-standing"><div class="wrap">
-  <h2 id="h-standing">Where Sworn Stands</h2>
+<section aria-labelledby="h-standing"><div class="wrap">
+  <h2 id="h-standing">Where Sworn stands</h2>
   <p class="sub">As of November 13, 2026, the rules run in a tested model and as blockchain code on a practice chain. Sworn has not yet run on a public network.</p>
-  <div class="scroll"><table><thead><tr><th scope="col">What was checked</th><th scope="col">How</th><th scope="col">Result</th></tr></thead><tbody>
-  <tr><td data-l="Checked">The working model</td><td data-l="How">Automated tests of the coin, the founder vault, the checker registry and the receipt ledger</td><td class="num res" data-l="Result">62 of 62 pass</td></tr><tr><td data-l="Checked">The tests themselves</td><td data-l="How">Each rule was broken on purpose in a copy of the model to confirm the tests fail</td><td class="num res" data-l="Result">42 of 42 caught</td></tr><tr><td data-l="Checked">Coin and founder vault as blockchain code</td><td data-l="How">Checks run on a practice chain</td><td class="num res" data-l="Result">37 of 37 pass</td></tr><tr class="cont"><td data-l="Checked"></td><td data-l="How">Rules broken on purpose in that code</td><td class="num res" data-l="Result">23 of 23 caught</td></tr><tr><td data-l="Checked">Checker registry as blockchain code</td><td data-l="How">Checks run on a practice chain</td><td class="num res" data-l="Result">52 of 52 pass</td></tr><tr class="cont"><td data-l="Checked"></td><td data-l="How">Rules broken on purpose in that code</td><td class="num res" data-l="Result">30 of 30 caught</td></tr>
-  </tbody></table></div>
-  <ul class="plain">
-    <li>The model is retested every night.</li>
-    <li>Every number in the rules is a proposal until launch.</li>
-  </ul>
+  <dl class="figs">
+  <div><dd>62 of 62</dd><dt>automated tests of the model pass</dt></div>
+  <div><dd>42 of 42</dd><dt>rules broken on purpose were caught</dt></div>
+  <div><dd>37 of 37</dd><dt>practice-chain checks of the coin pass</dt></div>
+  <div><dd>52 of 52</dd><dt>practice-chain checks of the registry pass</dt></div>
+</dl>
+  <p style="margin:0"><a href="record/">The full record, including the checks that failed</a></p>
 </div></section>
 
-<section id="rules" aria-labelledby="h-rules"><div class="wrap">
-  <h2 id="h-rules">The Rules</h2>
-  <p class="sub">All 17, as the tested model enforces them. Rule 10 describes a bond in dollars. That bond is in the model and is left out of the first launch, where every bond is in coins.</p>
-  <ol class="rules"><li><span>The supply is 1,000,000,000 coins, created once.</span></li><li><span>No one can create coins, freeze an account, reverse a transfer or change a balance. This includes the founder.</span></li><li><span>Checks that involve the founder or the founder’s company add nothing to the founder’s usage milestone.</span></li><li><span>Coin owners with 20% of the coins outside the founder’s circle can block a founder release during its notice period.</span></li><li><span>A checker posts at least 10,000 coins before verifying anything.</span></li><li><span>The party who posts a claim pays a fee in coins, 20 at the least. 80% pays the checker whose finding stands, and 20% goes to the community pool.</span></li><li><span>When a challenge overturns a finding, the checker’s share of the fee pays the challenger.</span></li><li><span>A claim that no checker takes up within 30 days can be withdrawn. The fee and the bond return in full.</span></li><li><span>A check reads the real system. The operator’s own statement carries no weight.</span></li><li><span>Work reported finished that the system shows unfinished sends the operator’s dollar bond to the customer.</span></li><li><span>A false finding costs the checker 50% of its stake, split between the challenger and the community pool.</span></li><li><span>A finding can be challenged for 7 days. A failed challenge costs the challenger 100 coins.</span></li><li><span>A finding is judged against the system as it stood on the day the finding was made.</span></li><li><span>An issuer can post a sworn statement about its own coin for 30 to 365 days, with a bond of at least 10,000 coins behind it. A statement that reads true at its first check is in force for the term.</span></li><li><span>Anyone can report a statement in force. A statement that reads false forfeits its bond: 20% to the reporter and 80% to the community pool. A report against a statement that still reads true costs the reporter 100 coins, paid to the issuer.</span></li><li><span>A statement that stands through its term is recorded as honored, and its bond returns to the issuer.</span></li><li><span>Every finished check is entered in a ledger where each receipt carries the fingerprint of the one before it.</span></li></ol>
-</div></section>
-
-<section id="shares" aria-labelledby="h-shares"><div class="wrap">
-  <h2 id="h-shares">Who Receives the Coins</h2>
-  <p class="sub">1,000,000,000 coins, created once. The project sells no coins.</p>
-  <div class="scroll"><table><thead><tr><th scope="col">Share</th><th scope="col">Coins</th><th scope="col">Part</th><th scope="col">Terms</th></tr></thead><tbody>
-  <tr><td data-l="Share">Free distribution to users</td><td class="num" data-l="Coins">500,000,000</td><td class="num" data-l="Part">50%</td><td data-l="Terms">Given at no charge. No sale, no presale.</td></tr><tr><td data-l="Share">Community pool</td><td class="num" data-l="Coins">400,000,000</td><td class="num" data-l="Part">40%</td><td data-l="Terms">Receives 20% of every fee, half of every forfeited stake and 80% of every forfeited bond. No rule pays coins out of it, and the checker registry is built without its key.</td></tr><tr><td data-l="Share">Founder vault</td><td class="num" data-l="Coins">100,000,000</td><td class="num" data-l="Part">10%</td><td data-l="Terms">Locked 12 months, then 36 monthly slices. Each slice also requires 500 more independent verified checks and a 30-day public notice.</td></tr>
-  </tbody></table></div>
-  <h3 class="h3">The Founder Schedule</h3>
-  <ul class="plain">
-    <li>The founder share is locked in a vault for 12 months.</li>
-    <li>It then leaves in 36 monthly slices of 2,777,777 coins.</li>
-    <li>Each slice also requires 500 more independent verified checks. Checks that involve the founder or the founder’s company add nothing to that count.</li>
-    <li>Each release is announced 30 days ahead. During those days, owners of 20% of the coins outside the founder’s circle can block it.</li>
-  </ul>
-</div></section>
-
-<section id="risks" aria-labelledby="h-risks"><div class="wrap">
-  <h2 id="h-risks">Risks</h2>
-  <ul class="plain">
-    <li>Sworn carries no fixed value and no promise of redemption.</li>
-    <li>The registry code will have no owner key, so a fault found after launch stays.</li>
-    <li>A dispute is settled by reading the system again. Sworn therefore covers only systems that anyone can read, and public blockchain data is the first.</li>
-    <li>The minimum fee and the minimum bond are set in coins. A large rise in the coin’s price makes them costly, and a large fall makes them trivial.</li>
-    <li>Federal rules for coins leave several questions open. Congress could pass a statute that changes the answers.</li>
-  </ul>
-</div></section>
-
-<section id="contact" aria-labelledby="h-contact"><div class="wrap">
-  <h2 id="h-contact">Official Channels</h2>
+<section aria-labelledby="h-official"><div class="wrap">
+  <h2 id="h-official">Before you trust anything called Sworn</h2>
   <div class="notice">
     <p><strong>Sworn is in testing.</strong> The coin exists on a practice chain only. Any coin offered for sale under the Sworn name today is a counterfeit.</p>
     <p>The project sells no coins, now or at launch. Any message that asks for payment or for a wallet’s recovery words in Sworn’s name is a fraud.</p>
-    <p>Sworn is a registered name of VitalEdge, LLC, a Tennessee company. Founder: Jakob Taylor.</p>
-    <p>Issuers and checkers who want to take part in testing can write to hello@sworncoin.com.</p>
-    <p>Site: sworncoin.com<br>X: <a href="https://x.com/sworncoin" rel="noopener">@sworncoin</a><br>Email: <a href="mailto:hello@sworncoin.com">hello@sworncoin.com</a></p>
   </div>
+  <p style="margin:22px 0 0" class="muted">Issuers and checkers who want to take part in testing can write to <a href="mailto:hello@sworncoin.com">hello@sworncoin.com</a>.</p>
 </div></section>
+
 </main>
-<footer><div class="wrap"><span>Sworn™ · Proof of Done · © 2026 VitalEdge, LLC</span><span>Updated November 13, 2026</span></div></footer>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><p style="max-width:38ch">Sworn is a registered name of VitalEdge, LLC, a Tennessee company. Founder: Jakob Taylor.</p><p>Sworn is in testing. The project sells no coins.</p></div>
+    <div><h2>Pages</h2><ul><li><a href="./">Home</a></li><li><a href="how-it-works/">How It Works</a></li><li><a href="rules/">Rules</a></li><li><a href="record/">Record</a></li><li><a href="questions/">Questions</a></li></ul></div>
+    <div><h2>Official Channels</h2><ul><li>sworncoin.com</li><li><a href="https://x.com/sworncoin" rel="noopener">@sworncoin on X</a></li><li><a href="mailto:hello@sworncoin.com">hello@sworncoin.com</a></li></ul></div>
+  </div>
+  <div class="fine"><span>Sworn™ · Proof of Done · © 2026 VitalEdge, LLC</span><span>Updated November 13, 2026</span></div>
+</div></footer>
 </body>
 </html>
