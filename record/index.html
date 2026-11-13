@@ -43,10 +43,19 @@
 
 <section aria-labelledby="h-standing"><div class="wrap">
   <h2 id="h-standing">Standing on November 13, 2026</h2>
-  <p class="sub">The rules run in a tested model and as blockchain code on a practice chain. Sworn has not yet run on a public network. The model is retested every night.</p>
+  <p class="sub">The rules run in a tested model and as blockchain code on Sepolia, Ethereum’s public test network. Sworn has not run on Ethereum’s main network. The model is retested every night.</p>
   <div class="scroll"><table><thead><tr><th scope="col">What was checked</th><th scope="col">How</th><th scope="col">Result</th></tr></thead><tbody>
   <tr><td data-l="Checked">The working model</td><td data-l="How" class="plainv muted">Automated tests of the coin, the founder vault, the checker registry and the receipt ledger</td><td class="num res" data-l="Result">62 of 62 pass</td></tr><tr><td data-l="Checked">The tests themselves</td><td data-l="How" class="plainv muted">Each rule was broken on purpose in a copy of the model to confirm the tests fail</td><td class="num res" data-l="Result">42 of 42 caught</td></tr><tr><td data-l="Checked">Coin and founder vault as blockchain code</td><td data-l="How" class="plainv muted">Checks run on a practice chain</td><td class="num res" data-l="Result">37 of 37 pass</td></tr><tr class="cont"><td data-l="Checked"></td><td data-l="How" class="plainv muted">Rules broken on purpose in that code</td><td class="num res" data-l="Result">23 of 23 caught</td></tr><tr><td data-l="Checked">Checker registry as blockchain code</td><td data-l="How" class="plainv muted">Checks run on a practice chain</td><td class="num res" data-l="Result">52 of 52 pass</td></tr><tr class="cont"><td data-l="Checked"></td><td data-l="How" class="plainv muted">Rules broken on purpose in that code</td><td class="num res" data-l="Result">30 of 30 caught</td></tr>
   </tbody></table></div>
+</div></section>
+
+<section aria-labelledby="h-live"><div class="wrap">
+  <h2 id="h-live">Live on the practice network</h2>
+  <p class="sub">Deployed November 13, 2026 on Sepolia, Ethereum’s public test network. Its coins have no value. Each contract’s published source was verified as an exact match of the code on the network. Read back after deployment: 1,000,000,000 coins in all, 100,000,000 in the founder vault and 400,000,000 in the community pool.</p>
+  <div class="scroll"><table><thead><tr><th scope="col">Contract</th><th scope="col">Address on Sepolia</th></tr></thead><tbody>
+  <tr><td data-l="Contract">The Sworn coin (SWORN)</td><td data-l="Address" class="num plainv" style="overflow-wrap:anywhere;white-space:normal"><a href="https://sepolia.etherscan.io/address/0x284F91dB477C3Be70B67119c9791BF05cB3c46AA" rel="noopener">0x284F91dB477C3Be70B67119c9791BF05cB3c46AA</a></td></tr><tr><td data-l="Contract">Founder vault</td><td data-l="Address" class="num plainv" style="overflow-wrap:anywhere;white-space:normal"><a href="https://sepolia.etherscan.io/address/0x95C4e2c9Ad822A2727c4036995BA21929eA771CD" rel="noopener">0x95C4e2c9Ad822A2727c4036995BA21929eA771CD</a></td></tr><tr><td data-l="Contract">Checker registry</td><td data-l="Address" class="num plainv" style="overflow-wrap:anywhere;white-space:normal"><a href="https://sepolia.etherscan.io/address/0xbB59CA5A562b02FB7E213d160982c9b5d0942441" rel="noopener">0xbB59CA5A562b02FB7E213d160982c9b5d0942441</a></td></tr><tr><td data-l="Contract">Community pool</td><td data-l="Address" class="num plainv" style="overflow-wrap:anywhere;white-space:normal"><a href="https://sepolia.etherscan.io/address/0x62924Aa750469190080C0809b060B63eA508E8de" rel="noopener">0x62924Aa750469190080C0809b060B63eA508E8de</a></td></tr>
+  </tbody></table></div>
+  <p class="muted" style="max-width:68ch;margin:0">On the test network the founder’s wallet also stands in for the free-distribution account, so practice coins can be given to testers. Transactions and settings are in <a href="https://github.com/twimjakob1/sworn/blob/main/deployments/sepolia.json" rel="noopener">the deployment record</a>.</p>
 </div></section>
 
 <section aria-labelledby="h-code"><div class="wrap split">
